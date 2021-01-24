@@ -5,13 +5,13 @@ class Home extends Controller
   public function index()
   {
     $data['title'] = 'Home';
-    $data['buku_anak'] = $this->model('Books_Model')->buku_anak();
-    $data['buku_pemikiran'] = $this->model('Books_Model')->buku_pemikiran();
-    $data['buku_umum'] = $this->model('Books_Model')->buku_umum();
+    $data['buku_anak'] = $this->model('Model_Buku_Anak')->bukuAnak();
+    $data['buku_pemikiran'] = $this->model('Model_Buku_Pemikiran')->bukuPemikiran();
+    $data['buku_umum'] = $this->model('Model_Buku_Umum')->bukuUmum();
 
     $this->view('templates/header', $data);
-    $this->view('templates/navigation');
-    $this->view('templates/category');
+    $this->view('templates/navigation_home');
+    $this->view('templates/category_home');
     $this->view('home/index', $data);
     $this->view('templates/footer');
   }

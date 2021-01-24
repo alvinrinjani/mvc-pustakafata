@@ -19,10 +19,10 @@
             Kategori Buku
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item js-scroll-trigger" href="<?= BASEURL; ?>#buku_anak">Buku Anak</a>
-            <a class="dropdown-item js-scroll-trigger" href="<?= BASEURL; ?>#buku_pemikiran">Buku Pemikiran</a>
+            <a class="dropdown-item js-scroll-trigger" href="#buku_anak">Buku Anak</a>
+            <a class="dropdown-item js-scroll-trigger" href="#buku_pemikiran">Buku Pemikiran</a>
             <!-- <div class="dropdown-divider"></div> -->
-            <a class="dropdown-item js-scroll-trigger" href="<?= BASEURL; ?>#buku_umum">Buku Umum</a>
+            <a class="dropdown-item js-scroll-trigger" href="#buku_umum">Buku Umum</a>
           </div>
         </li>
         <li class="nav-item">
