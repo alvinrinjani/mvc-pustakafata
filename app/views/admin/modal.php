@@ -10,7 +10,7 @@
     <!-- Modal Input-->
     <!-- Modal Input-->
     <div class="modal fade" id="input_buku" tabindex="-1" aria-labelledby="modal_buku" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-dialog modal-dialog-scrollable modal-lg">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="modal_buku">Input Data Buku</h5>
@@ -20,10 +20,10 @@
           </div>
           <div class="modal-body">
             <!-- FORM -->
-            <form action="<?= BASEURL; ?>/admin/input_buku" method="post">
+            <form action="<?= BASEURL; ?>/admin/input_buku" method="post" enctype="multipart/form-data">
               <div class="form-group">
                 <label for="judul">Judul Buku</label>
-                <input type="text" class="form-control" id="judul" name="judul">
+                <input type="text" class="form-control" id="judul" name="judul" required>
               </div>
               <div class="form-group">
                 <label for="penulis">Penulis</label>
@@ -66,8 +66,8 @@
                   </div>
               </fieldset>
               <div class="form-group">
-                <label for="gambar">Gambar</label>
-                <input type="text" class="form-control" id="gambar" name="gambar">
+                <label for="gambar">Pilih Gambar...</label>
+                <input type="file" class="form-control-file" id="gambar" name="gambar">
               </div>
               <div class="form-group">
                 <label for="sinopsis">Sinopsis Buku</label>
@@ -137,9 +137,113 @@
         </div>
       </div>
     </div>
+    <!-- End Modal Tabel Buku Anak-->
 
+    <!-- Modal Tabel Buku Pemikiran-->
+    <!-- Modal Tabel Buku Pemikiran-->
+    <!-- Modal Tabel Buku Pemikiran-->
+    <div class="modal fade" id="data_buku_pemikiran" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Data Buku Pemikiran</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped">
+              <thead class="bg-warning">
+                <tr>
+                  <th scope="col" class="text-center">No</th>
+                  <th scope="col">Gambar</th>
+                  <th scope="col">Judul Buku</th>
+                  <th scope="col">Penulis</th>
+                  <th scope="col">Harga</th>
+                  <th scope="col">Pilihan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php $i = 1; ?>
+                <?php foreach ($data['buku_pemikiran'] as $b_pemikiran) : ?>
+                  <tr>
+                    <td class="text-center"><?= $i; ?></td>
+                    <td><img src="<?= 'assets/img/' . $b_pemikiran['gambar']; ?>" alt="" style="width: 60px; height:30px;"></td>
+                    <td><?= $b_pemikiran['judul']; ?></td>
+                    <td><?= $b_pemikiran['penulis']; ?></td>
+                    <td><?= $b_pemikiran['harga']; ?></td>
+                    <td>
+                      <a href="<?= BASEURL; ?>/admin/update/<?= $b_pemikiran['slug']; ?>"><span class="badge badge-primary">Update</span></a>
+                      |
+                      <a href="<?= BASEURL; ?>/delete/delete_BukuPemikiran/<?= $b_pemikiran['slug']; ?>" onclick="return confirm('Yakin ingin menghapus data buku <?= $b_pemikiran['judul']; ?>')"><span class="badge badge-danger">Delete</span></a>
+                    </td>
+                  </tr>
+                  <?php $i++; ?>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Tabel Buku Pemikiran-->
 
-
+    <!-- Modal Tabel Buku Umum-->
+    <!-- Modal Tabel Buku Umum-->
+    <!-- Modal Tabel Buku Umum-->
+    <div class="modal fade" id="data_buku_umum" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Data Buku Umum</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-striped">
+              <thead class="bg-warning">
+                <tr>
+                  <th scope="col" class="text-center">No</th>
+                  <th scope="col">Gambar</th>
+                  <th scope="col">Judul Buku</th>
+                  <th scope="col">Penulis</th>
+                  <th scope="col">Harga</th>
+                  <th scope="col">Pilihan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php $i = 1; ?>
+                <?php foreach ($data['buku_umum'] as $b_umum) : ?>
+                  <tr>
+                    <td class="text-center"><?= $i; ?></td>
+                    <td><img src="<?= 'assets/img/' . $b_umum['gambar']; ?>" alt="" style="width: 60px; height:30px;"></td>
+                    <td><?= $b_umum['judul']; ?></td>
+                    <td><?= $b_umum['penulis']; ?></td>
+                    <td><?= $b_umum['harga']; ?></td>
+                    <td>
+                      <a href="<?= BASEURL; ?>/admin/update/<?= $b_umum['slug']; ?>"><span class="badge badge-primary">Update</span></a>
+                      |
+                      <a href="<?= BASEURL; ?>/delete/delete_BukuUmum/<?= $b_umum['slug']; ?>" onclick="return confirm('Yakin ingin menghapus data buku <?= $b_umum['judul']; ?>')"><span class="badge badge-danger">Delete</span></a>
+                    </td>
+                  </tr>
+                  <?php $i++; ?>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Tabel Buku Umum-->
 
 
   </div>

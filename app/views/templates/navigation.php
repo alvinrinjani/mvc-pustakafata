@@ -9,7 +9,7 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Cari buku..." aria-label="Search">
         <button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Cari</button>
       </form>
-      <ul class="navbar-nav ml-auto" style="font-family: 'Acme', sans-serif;">
+      <ul class="navbar-nav ml-auto acme">
         <li class="nav-item">
           <a class="nav-link" href="<?= BASEURL; ?>">Beranda
           </a>

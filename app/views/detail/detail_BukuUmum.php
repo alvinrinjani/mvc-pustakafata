@@ -4,11 +4,11 @@
     <div class="card flex" style="width: 22rem;">
       <img src="<?= BASEURL; ?>/assets/img/<?= $data['detail_BukuUmum']['gambar']; ?>" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title"><?= $data['detail_BukuUmum']['judul']; ?></h5>
-        <p class="card-text"><strong> Penulis : </strong><em><?= $data['detail_BukuUmum']['penulis']; ?></em></p>
-        <p class="card-text"><strong>Penerbit : </strong><em><?= $data['detail_BukuUmum']['penerbit']; ?></em></p>
-        <p class="card-text"><strong>Tahun Terbit : </strong><em><?= $data['detail_BukuUmum']['tahun']; ?></em></p>
-        <p class="card-text"><strong>Harga : </strong><em>Rp.<?= $data['detail_BukuUmum']['harga']; ?>,-</em></p>
+        <h5 class="card-title merienda"><?= $data['detail_BukuUmum']['judul']; ?></h5>
+        <p class="card-text gupter"><strong> Penulis : </strong><em><?= $data['detail_BukuUmum']['penulis']; ?></em></p>
+        <p class="card-text gupter"><strong>Penerbit : </strong><em><?= $data['detail_BukuUmum']['penerbit']; ?></em></p>
+        <p class="card-text gupter"><strong>Tahun Terbit : </strong><em><?= $data['detail_BukuUmum']['tahun']; ?></em></p>
+        <p class="card-text gupter"><strong>Harga : </strong><em>Rp.<?= $data['detail_BukuUmum']['harga']; ?>,-</em></p>
       </div>
       <div class="card-footer">
         <a href="#" class="btn btn-success">Pesan Buku</a>

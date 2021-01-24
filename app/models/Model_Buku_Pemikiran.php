@@ -51,4 +51,13 @@ class Model_Buku_Pemikiran
     $this->db->execute();
     return $this->db->rowCount();
   }
+
+  public function delete_BukuPemikiran($slug)
+  {
+    // $query = "DELETE FROM buku_pemikiran WHERE slug = :slug";
+    $this->db->query('DELETE FROM ' . $this->table_buku_pemikiran . ' WHERE slug=:slug');
+    $this->db->bind('slug', $slug);
+    $this->db->execute();
+    return $this->db->rowCount();
+  }
 }

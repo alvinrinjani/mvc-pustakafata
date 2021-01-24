@@ -13,7 +13,8 @@
         <button type="button" class="btn btn-secondary shadow mb-2 dropdown-toggle" id="update-delete-dropdown" data-toggle="dropdown"><a href="" style="text-decoration:none;" class="text-white">Update & Delete Data Buku</a></button>
         <div class="dropdown-menu" aria-labelledby="update-delete-dropdown">
           <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#data_buku_anak">Data Buku Anak</button>
-
+          <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#data_buku_pemikiran">Data Buku Pemikiran</button>
+          <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#data_buku_umum">Data Buku Umum</button>
         </div>
       </div>
       <!-- End Content Category -->

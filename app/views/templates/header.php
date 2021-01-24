@@ -12,6 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sniglet&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Gupter&display=swap" rel="stylesheet">
 
   <title><?= $data['title']; ?> | <?= SHOP; ?></title>
 
@@ -20,10 +24,10 @@
 
   <!-- Bootstrap core CSS -->
   <link href="<?= BASEURL; ?>/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="<?= BASEURL; ?>/vendor/bootstrap/css/custom.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
   <link href="<?= BASEURL; ?>/css/shop-homepage.css" rel="stylesheet">
-  <link href="<?= BASEURL; ?>/css/custom.css" rel="stylesheet">
 
 </head>
 
