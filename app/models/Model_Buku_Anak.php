@@ -26,7 +26,7 @@ class Model_Buku_Anak
     return $this->db->single();
   }
 
-  public function upload($data)
+  public function upload()
   {
     $namagambar = $_FILES['gambar']['name'];
     $ukuranGambar = $_FILES['gambar']['size'];
@@ -51,7 +51,7 @@ class Model_Buku_Anak
     }
 
     // cek ukuran gambar
-    if ($ukuranGambar > 1000000) {
+    if ($ukuranGambar > 1500000) {
       Flasher::setFlash('gagal', 'buku', 'ditambahkan', 'danger', BASEURL);
       header('Location:' . BASEURL . '/admin');
       exit;

@@ -8,6 +8,11 @@ body {
 	) !important;
 }
 
-/* .teal {
-	background-image: linear-gradient(45deg, #38e7d3, #11998e) !important;
-} */
+.orange {
+	background-image: linear-gradient(
+		135deg,
+		#ffd882,
+		#f68d81,
+		#d14737
+	) !important;
+}
