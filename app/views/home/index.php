@@ -35,13 +35,13 @@
   <div class="row">
     <?php foreach ($data['buku_anak'] as $b_anak) : ?>
       <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100 bg-white">
-          <a href="<?= BASEURL; ?>/detail/bukuAnak/<?= $b_anak['slug']; ?>"><img class="card-img-top" src="<?= 'assets/img/' . $b_anak['gambar']; ?>" alt="" style="max-height: 150px;"></a>
+        <div class="card h-100 shadow">
+          <a href="<?= BASEURL; ?>/detail/bukuAnak/<?= $b_anak['slug']; ?>"><img class="card-img-top shadow" src="<?= 'assets/img/' . $b_anak['gambar']; ?>" alt=""></a>
           <div class="card-body">
             <h6 class="card-title text-center">
-              <a class="merienda text-center mb-2" href="<?= BASEURL; ?>/detail/bukuAnak/<?= $b_anak['slug']; ?>"><?= $b_anak['judul']; ?></a>
             </h6>
           </div>
+          <a class="merienda text-center py-3" href="<?= BASEURL; ?>/detail/bukuAnak/<?= $b_anak['slug']; ?>"><?= $b_anak['judul']; ?></a>
           <h6 class="ml-4 sniglet">Rp. <?= $b_anak['harga']; ?>,-</h6>
           <div class="card-footer">
             <a href=""><span class="badge badge-success">Pesan Buku</span></a>
@@ -64,9 +64,9 @@
           <a href="<?= BASEURL; ?>/detail/bukuPemikiran/<?= $b_pemikiran['slug']; ?>"><img class="card-img-top" src="<?= 'assets/img/' . $b_pemikiran['gambar']; ?>" alt=""></a>
           <div class="card-body">
             <h6 class="card-title text-center">
-              <a class="merienda" href="<?= BASEURL; ?>/detail/bukuPemikiran/<?= $b_pemikiran['slug']; ?>"><?= $b_pemikiran['judul']; ?></a>
             </h6>
           </div>
+          <a class="merienda text-center py-3" href="<?= BASEURL; ?>/detail/bukuPemikiran/<?= $b_pemikiran['slug']; ?>"><?= $b_pemikiran['judul']; ?></a>
           <h6 class="ml-4 sniglet">Rp. <?= $b_pemikiran['harga']; ?>,-</h6>
           <div class="card-footer">
             <a href=""><span class="badge badge-success">Pesan Buku</span></a>
@@ -85,12 +85,12 @@
     <?php foreach ($data['buku_umum'] as $b_umum) : ?>
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 shadow">
-          <a href="<?= BASEURL; ?>/detail/bukuUmum/<?= $b_umum['slug']; ?>"><img class="card-img-top" src="<?= 'assets/img/' . $b_umum['gambar']; ?>" alt=""></a>
+          <a href="<?= BASEURL; ?>/detail/bukuUmum/<?= $b_umum['slug']; ?>"><img class="card-img-top shadow" src="<?= 'assets/img/' . $b_umum['gambar']; ?>" alt=""></a>
           <div class="card-body">
             <h6 class="card-title text-center">
-              <a class="merienda" href="<?= BASEURL; ?>/detail/bukuUmum/<?= $b_umum['slug']; ?>"><?= $b_umum['judul']; ?></a>
             </h6>
           </div>
+          <a class="merienda text-center py-3" href="<?= BASEURL; ?>/detail/bukuUmum/<?= $b_umum['slug']; ?>"><?= $b_umum['judul']; ?></a>
           <h6 class="ml-4 sniglet">Rp. <?= $b_umum['harga']; ?>,-</h6>
           <div class="card-footer">
             <a href=""><span class="badge badge-success">Pesan Buku</span></a>

@@ -4,7 +4,7 @@
     <div class="card flex" style="width: 22rem;">
       <img src="<?= BASEURL; ?>/assets/img/<?= $data['detail_BukuAnak']['gambar']; ?>" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title merienda"><?= $data['detail_BukuAnak']['judul']; ?></h5>
+        <h5 class="card-title merienda text-center"><?= $data['detail_BukuAnak']['judul']; ?></h5>
         <p class="card-text gupter"><strong> Penulis : </strong><em><?= $data['detail_BukuAnak']['penulis']; ?></em></p>
         <p class="card-text gupter"><strong>Penerbit : </strong><em><?= $data['detail_BukuAnak']['penerbit']; ?></em></p>
         <p class="card-text gupter"><strong>Tahun Terbit : </strong><em><?= $data['detail_BukuAnak']['tahun']; ?></em></p>

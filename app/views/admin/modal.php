@@ -98,41 +98,40 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <table class="table table-striped">
-              <thead class="bg-warning">
+          <!-- <div class="modal-body table"> -->
+          <table class="table-striped modal-body">
+            <thead class="bg-warning">
+              <tr>
+                <th scope="col" class="text-center">No</th>
+                <th scope="col">Gambar</th>
+                <th scope="col">Judul Buku</th>
+                <th scope="col">Penulis</th>
+                <th scope="col">Harga</th>
+                <th scope="col">Pilihan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php $i = 1; ?>
+              <?php foreach ($data['buku_anak'] as $b_anak) : ?>
                 <tr>
-                  <th scope="col" class="text-center">No</th>
-                  <th scope="col">Gambar</th>
-                  <th scope="col">Judul Buku</th>
-                  <th scope="col">Penulis</th>
-                  <th scope="col">Harga</th>
-                  <th scope="col">Pilihan</th>
+                  <td class="text-center"><?= $i; ?></td>
+                  <td><img src="<?= 'assets/img/' . $b_anak['gambar']; ?>" alt="" style="width: 60px; height:30px;"></td>
+                  <td><?= $b_anak['judul']; ?></td>
+                  <td><?= $b_anak['penulis']; ?></td>
+                  <td><?= $b_anak['harga']; ?></td>
+                  <td class="text-center">
+                    <a href="<?= BASEURL; ?>/admin/update/<?= $b_anak['slug']; ?>"><span class="badge badge-primary">Update</span></a>
+                    <a href="<?= BASEURL; ?>/delete/delete_BukuAnak/<?= $b_anak['slug']; ?>" onclick="return confirm('Yakin ingin menghapus data buku <?= $b_anak['judul']; ?>')"><span class="badge badge-danger">Delete</span></a>
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                <?php $i = 1; ?>
-                <?php foreach ($data['buku_anak'] as $b_anak) : ?>
-                  <tr>
-                    <td class="text-center"><?= $i; ?></td>
-                    <td><img src="<?= 'assets/img/' . $b_anak['gambar']; ?>" alt="" style="width: 60px; height:30px;"></td>
-                    <td><?= $b_anak['judul']; ?></td>
-                    <td><?= $b_anak['penulis']; ?></td>
-                    <td><?= $b_anak['harga']; ?></td>
-                    <td>
-                      <a href="<?= BASEURL; ?>/admin/update/<?= $b_anak['slug']; ?>"><span class="badge badge-primary">Update</span></a>
-                      |
-                      <a href="<?= BASEURL; ?>/delete/delete_BukuAnak/<?= $b_anak['slug']; ?>" onclick="return confirm('Yakin ingin menghapus data buku <?= $b_anak['judul']; ?>')"><span class="badge badge-danger">Delete</span></a>
-                    </td>
-                  </tr>
-                  <?php $i++; ?>
-                <?php endforeach; ?>
-              </tbody>
-            </table>
-          </div>
+                <?php $i++; ?>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+          <!-- </div> -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
           </div>
         </div>
       </div>
@@ -151,41 +150,40 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <table class="table table-striped">
-              <thead class="bg-warning">
+          <!-- <div class="modal-body"> -->
+          <table class="table-striped modal-body">
+            <thead class="bg-warning">
+              <tr>
+                <th scope="col" class="text-center">No</th>
+                <th scope="col">Gambar</th>
+                <th scope="col">Judul Buku</th>
+                <th scope="col">Penulis</th>
+                <th scope="col">Harga</th>
+                <th scope="col">Pilihan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php $i = 1; ?>
+              <?php foreach ($data['buku_pemikiran'] as $b_pemikiran) : ?>
                 <tr>
-                  <th scope="col" class="text-center">No</th>
-                  <th scope="col">Gambar</th>
-                  <th scope="col">Judul Buku</th>
-                  <th scope="col">Penulis</th>
-                  <th scope="col">Harga</th>
-                  <th scope="col">Pilihan</th>
+                  <td class="text-center"><?= $i; ?></td>
+                  <td><img src="<?= 'assets/img/' . $b_pemikiran['gambar']; ?>" alt="" style="width: 60px; height:30px;"></td>
+                  <td><?= $b_pemikiran['judul']; ?></td>
+                  <td><?= $b_pemikiran['penulis']; ?></td>
+                  <td><?= $b_pemikiran['harga']; ?></td>
+                  <td class="text-center">
+                    <a href="<?= BASEURL; ?>/admin/update/<?= $b_pemikiran['slug']; ?>"><span class="badge badge-primary">Update</span></a>
+                    <a href="<?= BASEURL; ?>/delete/delete_BukuPemikiran/<?= $b_pemikiran['slug']; ?>" onclick="return confirm('Yakin ingin menghapus data buku <?= $b_pemikiran['judul']; ?>')"><span class="badge badge-danger">Delete</span></a>
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                <?php $i = 1; ?>
-                <?php foreach ($data['buku_pemikiran'] as $b_pemikiran) : ?>
-                  <tr>
-                    <td class="text-center"><?= $i; ?></td>
-                    <td><img src="<?= 'assets/img/' . $b_pemikiran['gambar']; ?>" alt="" style="width: 60px; height:30px;"></td>
-                    <td><?= $b_pemikiran['judul']; ?></td>
-                    <td><?= $b_pemikiran['penulis']; ?></td>
-                    <td><?= $b_pemikiran['harga']; ?></td>
-                    <td>
-                      <a href="<?= BASEURL; ?>/admin/update/<?= $b_pemikiran['slug']; ?>"><span class="badge badge-primary">Update</span></a>
-                      |
-                      <a href="<?= BASEURL; ?>/delete/delete_BukuPemikiran/<?= $b_pemikiran['slug']; ?>" onclick="return confirm('Yakin ingin menghapus data buku <?= $b_pemikiran['judul']; ?>')"><span class="badge badge-danger">Delete</span></a>
-                    </td>
-                  </tr>
-                  <?php $i++; ?>
-                <?php endforeach; ?>
-              </tbody>
-            </table>
-          </div>
+                <?php $i++; ?>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+          <!-- </div> -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
           </div>
         </div>
       </div>
@@ -204,41 +202,40 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <div class="modal-body">
-            <table class="table table-striped">
-              <thead class="bg-warning">
+          <!-- <div class="modal-body"> -->
+          <table class="table-striped modal-body">
+            <thead class="bg-warning">
+              <tr>
+                <th scope="col" class="text-center">No</th>
+                <th scope="col">Gambar</th>
+                <th scope="col">Judul Buku</th>
+                <th scope="col">Penulis</th>
+                <th scope="col">Harga</th>
+                <th scope="col">Pilihan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php $i = 1; ?>
+              <?php foreach ($data['buku_umum'] as $b_umum) : ?>
                 <tr>
-                  <th scope="col" class="text-center">No</th>
-                  <th scope="col">Gambar</th>
-                  <th scope="col">Judul Buku</th>
-                  <th scope="col">Penulis</th>
-                  <th scope="col">Harga</th>
-                  <th scope="col">Pilihan</th>
+                  <td class="text-center"><?= $i; ?></td>
+                  <td><img src="<?= 'assets/img/' . $b_umum['gambar']; ?>" alt="" style="width: 60px; height:30px;"></td>
+                  <td><?= $b_umum['judul']; ?></td>
+                  <td><?= $b_umum['penulis']; ?></td>
+                  <td><?= $b_umum['harga']; ?></td>
+                  <td class="text-center">
+                    <a href="<?= BASEURL; ?>/admin/update/<?= $b_umum['slug']; ?>"><span class="badge badge-primary">Update</span></a>
+                    <a href="<?= BASEURL; ?>/delete/delete_BukuUmum/<?= $b_umum['slug']; ?>" onclick="return confirm('Yakin ingin menghapus data buku <?= $b_umum['judul']; ?>')"><span class="badge badge-danger">Delete</span></a>
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                <?php $i = 1; ?>
-                <?php foreach ($data['buku_umum'] as $b_umum) : ?>
-                  <tr>
-                    <td class="text-center"><?= $i; ?></td>
-                    <td><img src="<?= 'assets/img/' . $b_umum['gambar']; ?>" alt="" style="width: 60px; height:30px;"></td>
-                    <td><?= $b_umum['judul']; ?></td>
-                    <td><?= $b_umum['penulis']; ?></td>
-                    <td><?= $b_umum['harga']; ?></td>
-                    <td>
-                      <a href="<?= BASEURL; ?>/admin/update/<?= $b_umum['slug']; ?>"><span class="badge badge-primary">Update</span></a>
-                      |
-                      <a href="<?= BASEURL; ?>/delete/delete_BukuUmum/<?= $b_umum['slug']; ?>" onclick="return confirm('Yakin ingin menghapus data buku <?= $b_umum['judul']; ?>')"><span class="badge badge-danger">Delete</span></a>
-                    </td>
-                  </tr>
-                  <?php $i++; ?>
-                <?php endforeach; ?>
-              </tbody>
-            </table>
-          </div>
+                <?php $i++; ?>
+              <?php endforeach; ?>
+            </tbody>
+          </table>
+          <!-- </div> -->
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
           </div>
         </div>
       </div>
